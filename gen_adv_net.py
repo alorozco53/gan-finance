@@ -1,6 +1,6 @@
 import sys
 import os
-from build_GAN_models import*
+from ganfinance.build_GAN_models import*
 
 import keras
 from keras.models import Sequential
