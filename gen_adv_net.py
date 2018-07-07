@@ -135,7 +135,7 @@ def generate(out_loc, num, only_good_ones=True):
             #noise = np.reshape(noise, (10, 32))
             gen_data = generator.predict(noise, verbose=1)
             gen_data_pred = discriminator.predict(gen_data, verbose=1)[:,0] # hot-one, 1st col is p(true) 
-            print(gen_data)
+            print(gen_data.shape)
     
     
             # Now sort the images based on how good they were, and take the best one
