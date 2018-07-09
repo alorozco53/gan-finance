@@ -39,8 +39,8 @@ def train(data_file, out_loc, batch_size, epochs, lr_gen, lr_desc, lr_both):
     epochs = int(epochs)
 
     ######### Initalize the models, and then combine them to create discriminator_on_generator
-    generator = gen_model_stock(lr=lr_gen)
-    discriminator = desc_model_stock(lr=lr_desc)
+    generator = gen_model_stock(lr=lr_gen, max_time=730)
+    discriminator = desc_model_stock(lr=lr_desc, max_time=730)
     discriminator_on_generator = build_gen_desc_stock(generator, discriminator,  lr=lr_both)
     discriminator.trainable = True
 
